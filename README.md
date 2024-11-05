@@ -1,5 +1,3 @@
-# AplikasiPertambahanDuaAngka
- Latihan 1 - Maria Olpah (2210010684)
 
 # Aplikasi Pertambahan Dua Angka
 
