@@ -54,9 +54,35 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel3.setText("Angka Ke Dua");
 
+        textFieldAngka1.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldAngka1FocusGained(evt);
+            }
+        });
         textFieldAngka1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 textFieldAngka1ActionPerformed(evt);
+            }
+        });
+        textFieldAngka1.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldAngka1KeyTyped(evt);
+            }
+        });
+
+        textFieldAngka2.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                textFieldAngka2FocusGained(evt);
+            }
+        });
+        textFieldAngka2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldAngka2ActionPerformed(evt);
+            }
+        });
+        textFieldAngka2.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                textFieldAngka2KeyTyped(evt);
             }
         });
 
@@ -101,11 +127,11 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(textFieldAngka1)
                             .addComponent(textFieldAngka2, javax.swing.GroupLayout.DEFAULT_SIZE, 153, Short.MAX_VALUE))
-                        .addContainerGap(127, Short.MAX_VALUE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addComponent(buttonHapus, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 120, Short.MAX_VALUE)
                         .addComponent(buttonKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(36, 36, 36))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -138,9 +164,7 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 32, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,6 +201,32 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
        System.exit(0);
 
     }//GEN-LAST:event_buttonKeluarActionPerformed
+
+    private void textFieldAngka1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldAngka1KeyTyped
+      char c = evt.getKeyChar(); // Mendapatkan karakter yang ditekan
+if (!Character.isDigit(c)) { // Jika bukan angka
+    evt.consume(); // Mengabaikan input
+}
+    }//GEN-LAST:event_textFieldAngka1KeyTyped
+
+    private void textFieldAngka2KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_textFieldAngka2KeyTyped
+        char c = evt.getKeyChar();
+if (!Character.isDigit(c)) { // Jika karakter bukan angka
+    evt.consume(); // Abaikan input
+}
+    }//GEN-LAST:event_textFieldAngka2KeyTyped
+
+    private void textFieldAngka1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textFieldAngka1FocusGained
+        textFieldAngka1.setText("");
+    }//GEN-LAST:event_textFieldAngka1FocusGained
+
+    private void textFieldAngka2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldAngka2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldAngka2ActionPerformed
+
+    private void textFieldAngka2FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_textFieldAngka2FocusGained
+        textFieldAngka2.setText("");
+    }//GEN-LAST:event_textFieldAngka2FocusGained
 
     /**
      * @param args the command line arguments
