@@ -41,6 +41,7 @@ public class PertambahanDuaAngkaFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Aplikasi Pertambahan Dua Angka");
+        setFont(new java.awt.Font("Agency FB", 1, 18)); // NOI18N
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 102, 204), 6));
         jPanel1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
